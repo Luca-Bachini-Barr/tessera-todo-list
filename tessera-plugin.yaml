@@ -1,0 +1,34 @@
+# To-do list: the open items of a to-do list in Home Assistant (Microsoft To Do, the shopping list, Todoist, CalDAV,
+# any `todo` entity) on a tile, ticked off with a tap, and added with a keyboard on the screen.
+id: todo_list
+version: 0.1.0
+api: "0.12"
+icon: format-list-bulleted
+maintainer: Luca-Bachini-Barr
+license: MIT
+stage: beta
+topics: [home]
+requires:
+  esphome: 2026.6.2
+boards: any
+flash_kb: 16
+
+permissions:
+  # The items of the list: Home Assistant keeps them out of the entity's attributes, so the screen asks for them.
+  ha_commands: ["call_service:todo.get_items"]
+  # Add an item from the keyboard, tick one off from the tile or the card.
+  home_assistant_actions: [todo.add_item, todo.update_item]
+
+tiles:
+  - id: list
+    name: tile_name
+    icon: format-list-bulleted
+    sizes: { min: 1x1, max: 4x4 }
+    memory: 2400
+    domains: [todo]
+    example: tile_example
+    preview: { title: "{name}", value: "{state}" }
+
+cards:
+  - { id: items, name: card_items }
+  - { id: add, name: card_add, wide: true }

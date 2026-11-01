@@ -1,0 +1,28 @@
+{
+  "_meta": { "name": "English" },
+  "screen": {
+    "choose": "Choose a to-do list",
+    "loading": "Reading the list",
+    "failed": "The list did not answer",
+    "empty": "Nothing to do",
+    "more": "+{n} more",
+    "page": "{page} of {pages}",
+    "add": "Add",
+    "add_item": "Add an item",
+    "add_to": "Add to {list}",
+    "type_hint": "Type an item",
+    "added": "Added: {item}",
+    "not_sent": "Not sent: may this screen perform actions?",
+    "space": "space",
+    "numbers": "123",
+    "letters": "ABC"
+  },
+  "app": {
+    "name": "To-do list",
+    "summary": "A to-do list from Home Assistant on a tile: tick items off and add new ones with a keyboard.",
+    "tile_name": "To-do list",
+    "tile_example": "3 to do: Milk, Bread, Eggs",
+    "card_items": "The whole list",
+    "card_add": "Add an item"
+  }
+}
